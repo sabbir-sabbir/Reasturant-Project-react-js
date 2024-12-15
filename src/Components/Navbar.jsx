@@ -8,10 +8,10 @@ const MyNavbar = () => {
   return (
      <>
      {/* Main section */}
-     <section className=' md:w-full  h-20 '>
-      <div className=' w-full  flex  justify-evenly items-center py-2 gap-8 border-b-1 border-letter '>
+     <section className=' w-full  h-20 '>
+      <div className=' w-full  flex  justify-evenly items-center py-2 gap-0 border-b-1 border-letter '>
         {/* image */}
-        <div className=' w-[100pxpx]  md:w-[250px]' >
+        <div className=' w-[100px]  md:w-[250px]' >
           <img className='py-1' src="logo.png" alt="" />
         </div>
         {/* search bar */}
@@ -34,8 +34,8 @@ const MyNavbar = () => {
      </section>
 
      {/* Nav section two */}
-     <section className=' md:w-full  h-20 mx-10 mt-0  ' >
-         <ul className='grid grid-cols-6 md:grid-cols-12 gap-10 mt-3 md:mt-1 md:gap-0 '>
+     <section className=' md:w-full  h-20  mt-0  ' >
+         <ul className='grid grid-cols-6 md:grid-cols-12 gap-5 mt-3 md:mt-1 md:gap-0 container mx-auto  '>
           <div>
           <li>
             <NavLink to=''> 
