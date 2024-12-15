@@ -23,7 +23,7 @@ const Resturantcarousel = () => {
   
   return (
     <>
-    <div className="container mx-auto h-[450px] w-full bg-[#1677BD] rounded-xl flex flex-col justify-between items-center relative overflow-hidden">
+    <div className="container mx-auto h-[450px] w-full bg-[#1677BD] rounded-xl flex flex-col justify-between items-center relative overflow-hidden" >
       {/* Heading */}
       <h1 className="text-white text-[28px] mt-4 ">
         Find the best restaurant ratings below
