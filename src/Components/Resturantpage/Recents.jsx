@@ -105,7 +105,7 @@ const Recents = () => {
 
       <div className="flex justify-evenly ">
         {visibleData.map((item) => (
-          <div className=" key={id} bg-[#F8F8F8] w-[380px] space-y-5 py-2 px-3 rounded-lg">
+          <div key={item.id} className="  bg-[#F8F8F8] w-[380px] space-y-5 py-2 px-3 rounded-lg">
             <div className="flex gap-2 items-center">
               <div>
                 <img

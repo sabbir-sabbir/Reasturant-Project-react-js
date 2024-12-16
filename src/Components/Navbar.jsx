@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { TbWorld } from "react-icons/tb";
 import {Button} from '@nextui-org/react'
 
-const MyNavbar = () => {
+const MyNavbar = ({getData}) => {
     
   return (
      <>
@@ -17,7 +17,7 @@ const MyNavbar = () => {
         {/* search bar */}
         <div >
           <div className=' w-[100px]  md:w-[450px] flex h-5 md:h-8'>
-            <input className=' w-[100px] md:w-full  rounded-full outline-none  cursor-pointer p-3 border-1 border-gray-800'  type="text" placeholder='Search Best Service...Singapore' />
+            <input onChange={getData} className=' w-[100px] md:w-full  rounded-full outline-none  cursor-pointer p-3 border-1 border-gray-800'  type="text" placeholder='Search Best Service...Singapore' />
           </div>
         </div>
        
@@ -38,7 +38,7 @@ const MyNavbar = () => {
          <ul className='grid grid-cols-6 md:grid-cols-12 gap-5 mt-3 md:mt-1 md:gap-0 container mx-auto  '>
           <div>
           <li>
-            <NavLink to=''> 
+            <NavLink to='/all'> 
             <div className='w-4 h-3 flex flex-col items-center'>
               <img src="all.png" alt="" />
               <p className='text-letter font-light text-center text-[12px]'>All</p>
