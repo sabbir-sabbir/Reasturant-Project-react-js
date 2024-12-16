@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import SeeMore from '../Resturantpage/SeeMore';
+import { FaArrowUpShortWide } from "react-icons/fa6";
 
 const ALL = ({inputValue}) => {
   const Data = [
@@ -8,7 +10,7 @@ const ALL = ({inputValue}) => {
         body: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         stars: "4star.png",
         review: "4.8 (34 reviews)",
-        name: "restaurant",
+        name: "restaurant"
        
 
     },
@@ -18,7 +20,7 @@ const ALL = ({inputValue}) => {
         body: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         stars: "5star.png",
         review: "5.0 (253 reviews)",
-        name: "restaurant",
+        name: "restaurant"
        
     },
     {
@@ -27,7 +29,7 @@ const ALL = ({inputValue}) => {
         body: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         stars: "3.5star.png",
         review: "3.0 (87 reviews)",
-        name: "restaurant",
+        name: "restaurant"
         
     },
     {
@@ -36,7 +38,7 @@ const ALL = ({inputValue}) => {
         body: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         stars: "5star.png",
         review: "5.0 (876 reviews)",
-        name: "restaurant",
+        name: "restaurant"
         
     },
     {
@@ -45,7 +47,7 @@ const ALL = ({inputValue}) => {
         body: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         stars: "3.5star.png",
         review: "3.5 (334 reviews)",
-        name: "hotel",
+        name: "hotel"
        
     },
     {
@@ -122,28 +124,24 @@ let FilterOut = store.filter((curValue)=> {
   return (
     <>
     <section className='w-full container mx-auto'>
-    <div className='grid grid-cols-2'>
+    <div className='grid grid-cols-2 gap-16 '>
       {FilterOut.map((cur, i)=> (
-          <div key={i} className='flex gap-2'>
+          <div key={i} className='flex border-y-1 border-letter py-2 transform hover:scale-110 transition duration-300 ease-in-out'>
         <div>
-          <img src={cur.img} alt="" />
+          <img  src={cur.img} alt="" />
         </div>
         <div>
-          <div><h1>{cur.title}</h1></div>
-          <div><p>{cur.body}</p></div>
-          <div>
-            <div><img src={cur.stars} alt="" /></div>
-            <div><p>{cur.review}</p></div>
+          <div><h1 className="text-xl font-bold  px-2 text-HB">{cur.title}</h1></div>
+          <div><p className='text-letter text-[14px] leading-tight  px-2' >{cur.body}</p></div>
+          <div className='flex gap-1 items-center pt-2 ml-3'>
+            <div><img className='w-[80px] h-[12px]' src={cur.stars} alt="" /></div>
+            <div><p className='text-letter text-[14px] leading-tight py-1 px-2'>{cur.review}</p></div>
           </div>
         </div>
        </div> 
       ))}
-
-      
-       <div>
-        <img src="map.png" alt="" />
-       </div>
     </div>
+    <SeeMore/>
    </section>
     </>
   

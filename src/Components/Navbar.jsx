@@ -17,7 +17,7 @@ const MyNavbar = ({getData}) => {
         {/* search bar */}
         <div >
           <div className=' w-[100px]  md:w-[450px] flex h-5 md:h-8'>
-            <input onChange={getData} className=' w-[100px] md:w-full  rounded-full outline-none  cursor-pointer p-3 border-1 border-gray-800'  type="text" placeholder='Search Best Service...Singapore' />
+            <input onChange={getData} className=' w-[100px] md:w-full  rounded-full outline-none  cursor-pointer p-3 border-1 border-gray-800'  type="text" placeholder='restaurant, hotel, service      |      Singapore' />
           </div>
         </div>
        
@@ -38,7 +38,7 @@ const MyNavbar = ({getData}) => {
          <ul className='grid grid-cols-6 md:grid-cols-12 gap-5 mt-3 md:mt-1 md:gap-0 container mx-auto  '>
           <div>
           <li>
-            <NavLink to='/all'> 
+            <NavLink to='/'> 
             <div className='w-4 h-3 flex flex-col items-center'>
               <img src="all.png" alt="" />
               <p className='text-letter font-light text-center text-[12px]'>All</p>
@@ -49,7 +49,7 @@ const MyNavbar = ({getData}) => {
           
           <div>
           <li>
-            <NavLink to='/'> 
+            <NavLink to='/restaurant'> 
             <div className='w-4 h-3 flex flex-col items-center'>
               <img src="resturantl.png" alt="" />
               <p className='text-letter font-light text-center text-[12px]'>Resturants</p>
@@ -71,7 +71,7 @@ const MyNavbar = ({getData}) => {
 
           <div>
           <li>
-            <NavLink> 
+            <NavLink to="/homeservice"> 
             <div className='w-4 h-3 flex flex-col items-center'>
               <img src="homel.png" alt="" />
               <p className='text-letter font-light text-center text-[12px]'>Home services</p>

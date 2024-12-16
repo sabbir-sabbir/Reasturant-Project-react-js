@@ -2,8 +2,10 @@ import './App.css'
 import ALL from './Components/Homepage/Home';
 import Resturant from './Components/Resturantpage/Resturant';
 import MyNavbar from './Components/Navbar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import BellaItalia from './Components/Homeservice/BellaItalia'
 import Footer from './Components/Resturantpage/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import {useState} from 'react'
 
 function App() {
@@ -19,8 +21,9 @@ function App() {
    <BrowserRouter>
     <MyNavbar getData={getData} />
      <Routes>
-       <Route path='/all' element={<ALL inputValue={inputValue} />} />
-       <Route path='/' element={<Resturant/>} />
+       <Route path='/' element={<ALL inputValue={inputValue} />} />
+       <Route path='/restaurant' element={<Resturant inputValue={inputValue} />} />
+       <Route path='/homeservice' element={<BellaItalia/>} />
     </Routes>
     <Footer/>
   </BrowserRouter>
