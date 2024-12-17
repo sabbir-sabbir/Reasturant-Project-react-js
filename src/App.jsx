@@ -3,10 +3,10 @@ import ALL from './Components/Homepage/Home';
 import Resturant from './Components/Resturantpage/Resturant';
 import MyNavbar from './Components/Navbar'
 import BellaItalia from './Components/Homeservice/BellaItalia'
-import Footer from './Components/Resturantpage/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import Footer from './Components/Footer';
 import {useState} from 'react'
+
 
 function App() {
   const [inputValue, setInputValue] = useState("")

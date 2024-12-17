@@ -123,19 +123,19 @@ let FilterOut = store.filter((curValue)=> {
 
   return (
     <>
-    <section className='w-full container mx-auto'>
+    <section className='w-full container mx-auto mt-12 md:mt-0 p-4 md:p-0'>
     <div className='grid grid-cols-2 gap-16 '>
       {FilterOut.map((cur, i)=> (
           <div key={i} className='flex border-y-1 border-letter py-2 transform hover:scale-110 transition duration-300 ease-in-out'>
         <div>
-          <img  src={cur.img} alt="" />
+          <img className='h-full'  src={cur.img} alt="" />
         </div>
         <div>
           <div><h1 className="text-xl font-bold  px-2 text-HB">{cur.title}</h1></div>
-          <div><p className='text-letter text-[14px] leading-tight  px-2' >{cur.body}</p></div>
+          <div><p className='text-letter text-[5px] md:text-[14px] leading-tight  px-2 ' >{cur.body}</p></div>
           <div className='flex gap-1 items-center pt-2 ml-3'>
             <div><img className='w-[80px] h-[12px]' src={cur.stars} alt="" /></div>
-            <div><p className='text-letter text-[14px] leading-tight py-1 px-2'>{cur.review}</p></div>
+            <div><p className='text-letter text-[6px] md:text-[14px] leading-tight py-1 px-2'>{cur.review}</p></div>
           </div>
         </div>
        </div> 

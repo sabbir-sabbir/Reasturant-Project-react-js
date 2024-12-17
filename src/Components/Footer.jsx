@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <hr />
-      <section className="w-full container mx-auto ">
+      <section className="w-full container mx-auto p-5 md:p-0 ">
         <div className="grid grid-cols-3 gap-24 p-8">
           <div className="flex flex-col space-y-2">
             <div>

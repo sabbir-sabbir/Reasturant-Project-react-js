@@ -34,8 +34,8 @@ const MyNavbar = ({getData}) => {
      </section>
 
      {/* Nav section two */}
-     <section className=' md:w-full  h-20  mt-0  ' >
-         <ul className='grid grid-cols-6 md:grid-cols-12 gap-5 mt-3 md:mt-1 md:gap-0 container mx-auto  '>
+     <section className=' md:w-full  h-20  mt-0 ' >
+         <ul className='grid grid-cols-6 md:grid-cols-12 gap-12 mt-3 md:mt-1 md:gap-0 container mx-auto  '>
           <div>
           <li>
             <NavLink to='/'> 
