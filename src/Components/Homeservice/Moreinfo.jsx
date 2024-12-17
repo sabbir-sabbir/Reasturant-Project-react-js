@@ -49,7 +49,7 @@ const Moreinfo = () => {
                 <div>
                     <h1 className='font-bold text-black text-xl '>Menu Bella Italia</h1>
                 </div>
-                <div className='flex gap-2 items-center border-1 rounded-xl py-2 px-3'> <span><LuDownload className='w-6 h-5 text-blue-500 '/></span> <a href={pictureurl} download="place1.png" className='text-blue-500 text-sm'>Dowload this menu</a></div>
+                <div className='flex gap-2 items-center border-1 rounded-xl py-2 px-3'> <span><LuDownload className='w-6 h-5 text-blue-500 '/></span> <a href={pictureurl} download="menu.png" className='text-blue-500 text-sm'>Dowload this menu</a></div>
                 </div>
               </ModalBody>
               <ModalFooter>

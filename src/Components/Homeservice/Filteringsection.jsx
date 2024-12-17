@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { MdFilterList } from "react-icons/md";
+import SeeMore from '../Resturantpage/SeeMore';
 
 const Filteringsection = () => {
     const ratingOfpeople = [
@@ -150,6 +151,12 @@ const Filteringsection = () => {
 
     ]
 
+    const [filter, setFilter] = useState("fivestar"); // Default selected value
+
+  // Filter data based on selected value
+  const filteredData = ratingOfpeople.filter((person) =>
+    filter === "all" ? true : person.rating === filter
+  );
   
   return (
     <section className='w-full container mx-auto h-auto p-5 md:p-0 mt-16'>
@@ -157,7 +164,8 @@ const Filteringsection = () => {
             <div className='flex items-center gap-1 border-1  border-letter rounded-full w-[190px] px-2 py-2 '>
                 <div><MdFilterList className='w-6 h-6' /></div>
                 <div>
-                    <select className='outline-none'>
+                    <select  onChange={(e) => setFilter(e.target.value)} value={filter} className='outline-none'>
+                       <option value="all">Filter</option>
                         <option value="fivestar">5 ⭐⭐⭐⭐⭐</option>
                         <option value="fourstar">4 ⭐⭐⭐⭐</option>
                         <option value="threestar">3 ⭐⭐⭐</option>
@@ -167,12 +175,31 @@ const Filteringsection = () => {
                 </div>
             </div>
             {/* second div */}
-            <div>
-        
+         <div className='grid grid-cols-1 gap-3 p-5 items-center'>
+        {filteredData.map((item, index)=> (
+            <div className='flex flex-col gap-1 items-start bg-[#F8F8F8] px-4 py-4 rounded-xl transform hover:scale-110 transition duration-300 ease-in-out'>
+                <div><img className='w-10 h-10 bg-white  text-black p-2 rounded-full' src={item.img} alt="" /></div>
+                <div>
+                    <h1 className='font-lexend font-bold text-HB text-[16px]'>{item.name}</h1>
+                </div>
+                <div>
+                    <p className='text-letter font-semibold text-[10px]'>{item.home}</p>
+                </div>
+                <div className='flex items-center gap-2 mt-2'>
+                    <div><img src={item.rate} alt="" /></div>
+                    <div><p className='text-HB text-[14px]'>{item.date}</p></div>
+                </div>
+                <div>
+                    <p className='text-letter  text-[12px] leading-tight w-1/2'>The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.</p>
+                </div>
+            </div>
+        ))
+
+        }
       </div>
         </div>
 
-      
+      <SeeMore/>
     </section>
   )
 }

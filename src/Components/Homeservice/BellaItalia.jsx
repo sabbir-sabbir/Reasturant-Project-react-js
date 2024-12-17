@@ -4,6 +4,7 @@ import MorePlaces from './MorePlaces'
 import Moreinfo from './Moreinfo'
 import Rating from './Rating'
 import Filteringsection from './Filteringsection'
+import Discover from './Discover'
 
 const BellaItalia = () => {
     
@@ -14,6 +15,7 @@ const BellaItalia = () => {
        <Moreinfo/>
        <Rating/>
        <Filteringsection/>
+       <Discover/>
     </section>
   )
 }
