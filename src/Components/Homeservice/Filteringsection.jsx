@@ -151,7 +151,7 @@ const Filteringsection = () => {
 
     ]
 
-    const [filter, setFilter] = useState("fivestar"); // Default selected value
+    const [filter, setFilter] = useState("fivestar"); 
 
   // Filter data based on selected value
   const filteredData = ratingOfpeople.filter((person) =>
@@ -177,7 +177,7 @@ const Filteringsection = () => {
             {/* second div */}
          <div className='grid grid-cols-1 gap-3 p-5 items-center'>
         {filteredData.map((item, index)=> (
-            <div className='flex flex-col gap-1 items-start bg-[#F8F8F8] px-4 py-4 rounded-xl transform hover:scale-110 transition duration-300 ease-in-out'>
+            <div className='flex flex-col gap-1 items-start bg-[#F8F8F8] px-4 py-4 rounded-xl effect'>
                 <div><img className='w-10 h-10 bg-white  text-black p-2 rounded-full' src={item.img} alt="" /></div>
                 <div>
                     <h1 className='font-lexend font-bold text-HB text-[16px]'>{item.name}</h1>

@@ -56,12 +56,12 @@ const SeeMore = () => {
           </Button>
         </div>
         {show && (
-          <div className="w-full container mx-auto mt-8">
+          <div className=" w-[90%] md:w-full  h-auto container mx-auto p-8 md:p-0 mt-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 ">
               {more.map((data, i) => (
                 <div
                   key={i}
-                  className="bg-[#F8F8F8] pb-2 rounded-lg transform hover:scale-110 transition duration-300 ease-in-out"
+                  className="bg-[#F8F8F8] pb-2 rounded-lg effect"
                 >
                   <img src={data.img} alt="" />
                   <h2 className="text-xl font-bold py-1 px-2 text-HB">

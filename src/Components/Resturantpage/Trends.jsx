@@ -109,11 +109,11 @@ const Trends = ({inputValue}) => {
       return curValue.name.toLowerCase().includes(inputValue)
     })
   return (
-    <section className='container mx-auto w-full mt-8'>
+    <section className='container mx-auto w-[90%] md:w-full h-auto p-10 md:p-0 mt-8'>
         <div className='h-auto'> <h1 className='text-HB font-bold py-3 text-[32px]'>The latest trends</h1></div>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 '>
             {FilterOut.map((item, index)=> (
-                <div key={index}  className='bg-[#F8F8F8] pb-2 rounded-lg transform hover:scale-110 transition duration-300 ease-in-out'>
+                <div key={index}  className='bg-[#F8F8F8] pb-2 rounded-lg effect'>
                     <img  src={item.img} alt="" />
                     <h2 className='text-xl font-bold py-1 px-2 text-HB'>{item.title}</h2>
                     <p className='text-letter text-[14px] leading-tight py-1 px-2'>{item.body}</p>

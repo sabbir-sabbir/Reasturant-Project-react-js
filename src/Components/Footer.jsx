@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <hr />
-      <section className="w-full container mx-auto p-5 md:p-0 ">
+      <section className=" w-[90%] md:w-full h-auto container mx-auto  p-8 md:p-0 ">
         <div className="grid grid-cols-3 gap-24 p-8">
           <div className="flex flex-col space-y-2">
             <div>
@@ -75,6 +75,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <h1 className='text-center font-bold font-lexend mb-5'>Copyright&copy;Septembre 2023 myfeedback, designed by scott</h1>
       </section>
     </footer>
   );

@@ -3,5 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components {
+    .effect {
+      @apply transform hover:scale-110 transition duration-300 ease-in-out;
+    }
+  }
 

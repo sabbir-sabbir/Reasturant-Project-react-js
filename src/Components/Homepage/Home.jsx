@@ -126,7 +126,7 @@ let FilterOut = store.filter((curValue)=> {
     <section className='w-full container mx-auto mt-12 md:mt-0 p-4 md:p-0'>
     <div className='grid grid-cols-2 gap-16 '>
       {FilterOut.map((cur, i)=> (
-          <div key={i} className='flex border-y-1 border-letter py-2 transform hover:scale-110 transition duration-300 ease-in-out'>
+          <div key={i} className='flex border-y-1 border-letter py-2 effect'>
         <div>
           <img className='h-full'  src={cur.img} alt="" />
         </div>

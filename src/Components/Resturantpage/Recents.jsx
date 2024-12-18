@@ -74,7 +74,7 @@ const Recents = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 3;
 
-  // Next button logic
+  
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex + itemsPerPage >= Mydata.length ? 0 : prevIndex + itemsPerPage
@@ -85,7 +85,7 @@ const Recents = () => {
   const visibleData = Mydata.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <div className="w-full  h-auto p-4 mt-5 mb-6">
+    <div className="w-full container mx-auto  h-auto md:p-0 p-12 mt-5 mb-6 overflow-hidden">
       <div className='flex justify-between items-center '>
         <div>
           <h2 className="text-start text-2xl font-bold mb-6 font-lexend ml-5">
@@ -98,12 +98,12 @@ const Recents = () => {
             onClick={handleNext}
             className="   bg-white text-HB px-4 py-4 rounded-full shadow-md   animate-bounce"
           >
-            <BsArrowRight className="" />
+            <BsArrowRight className="effect" />
           </button>
         </div>
       </div>
 
-      <div className="flex justify-evenly ">
+      <div className="flex justify-evenly gap-5 flex-col md:flex-row   ">
         {visibleData.map((item) => (
           <div key={item.id} className="  bg-[#F8F8F8] w-[380px] space-y-5 py-2 px-3 rounded-lg">
             <div className="flex gap-2 items-center">
@@ -134,7 +134,7 @@ const Recents = () => {
               </div>
             </div>
             <div>
-              <p className="text-gray-500  leading-tight text-[16px]">
+              <p className="text-gray-500  leading-tight text-6px md:text-[16px]">
                 {item.desc}
               </p>
             </div>

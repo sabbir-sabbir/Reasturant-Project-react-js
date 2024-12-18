@@ -8,8 +8,8 @@ const MyNavbar = ({getData}) => {
   return (
      <>
      {/* Main section */}
-     <section className=' w-full  h-20 '>
-      <div className=' w-full  flex  justify-evenly items-center py-2 gap-0 border-b-1 border-letter '>
+     <section className='  container mx-auto w-[90%] md:w-full  h-[80px]'>
+      <div className='  md:w-full  flex  justify-evenly items-center py-2 gap-5 '>
         {/* image */}
         <div className=' w-[100px]  md:w-[250px]' >
           <img className='py-1' src="logo.png" alt="" />
@@ -24,17 +24,19 @@ const MyNavbar = ({getData}) => {
        {/* Feedback */}
         <div className='flex gap-2 items-center'>
           <div>
-          <TbWorld className='text-[25px] text-letter ' />
+          <TbWorld className=' text-[12] md:text-[25px] text-letter ' />
           </div>
           <div>
-            <Button size='xl'  className='bg-HB font-light md:font-medium rounded-full hover:bg-gray-700 text-white '>MyFeedback for business</Button>
+            <Button   className='bg-HB w-auto  text-[8px] md:text-[12px] md:font-medium rounded-full hover:bg-gray-700 text-white '>My Feedback for business</Button>
           </div>
         </div>
       </div>
+   
      </section>
+     <hr />
 
      {/* Nav section two */}
-     <section className=' md:w-full  h-20  mt-0 ' >
+     <section className=' w-[90%] container mx-auto md:w-full  h-20  mt-4 ' >
          <ul className='grid grid-cols-6 md:grid-cols-12 gap-12 mt-3 md:mt-1 md:gap-0 container mx-auto  '>
           <div>
           <li>
