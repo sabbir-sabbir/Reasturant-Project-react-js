@@ -1,2 +1,2 @@
-#  Techonology ised  = React + Vite + tailwind css + raw-css + next-ui 
+#  Techonology used  = React + Vite + tailwind css + raw-css + next-ui 
 
